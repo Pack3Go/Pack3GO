@@ -64,7 +64,13 @@
         <h2 class="text-center">Rastreo</h2>
         <hr class="star-primary">
         <div class="row">
-			<label value="Id seguimiento: "/><input type="text" id="id_rastreo">
+		<label>Ingrese guia:</label>
+		<input type="text" value="" id="text_guia" />
+		<input type="button" value="Consultar" id="btn_consulta" onclick="loadXMLDoc()"/>
+		</br>
+		<p id="msg"></p>
+		</br>
+		<div id="divDetalleGuia">
         </div>
       </div>
     </section>
