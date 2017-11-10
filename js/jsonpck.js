@@ -1,35 +1,66 @@
 $(document).ready(function(){
 $("#danger").hide();
 $("#divDetalleGuia").hide();
-var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","fecha":["18-sep-2017","18-sep-2017","18-sep-2017","18-sep-2017","19-sep-2017","19-sep-2017","19-sep-2017","05-oct-2017","06-oct-2017","06-oct-2017","10-oct-2017","10-oct-2017","13-oct-2017","23-oct-2017","24-oct-2017"],"hora":["11:45","13:34","19:30","19:45","11:40","17:20","17:20","07:20","13:40","19:40","08:15","13:45","13:45","22:20","16:20"],"movimiento":["Aprobado por el correo - Ciudad de México","Recolectado - Ciudad de México","Llegada a CEDIS - Ciudad de México","Movimiento a CEDIS - Ciudad de México","Salida de CEDIS - Ciudad de México","Regreso a CEDIS - Ciudad de México","Retenido","Salida de CEDIS - Ciudad de México","Procesado para salida - Ciudad de México","Salida a estación de transito - Ciudad de México","Llagada a estación de transito - Ciudad de México","Procesado para salida de estación - Ciudad de México","Previo a aduanas","Finalizo proceso de revisión por aduanas","En vuelo salida a destino internacional"],"comentarios":["","","","","","","","","Se retuvo el paquete por causas agenas al servicio","","","","","","",""]},{"idseguimiento":"EMX630315916","fecha":["18-oct-17","19-oct-17","19-oct-17","19-oct-17","19-oct-17","20-oct-17","20-oct-17","20-oct-17"],"hora":["22:20","14:13","17:32","22:45","23:56","07:20","10:56","11:45"],"movimiento":["Etiqueta Impresa - Ciudad de México","Recolectado por el correo. Ciudad de México","Procesado en centro de distribución. Ciudad de México","Procesado en Aerolinea. Ciudad de México","Llegada a Centro de distribucion destino - Veracruz","Arribado a sucursal de destino. Veracruz-México","Salida Ruta para Entrega","Entregado"],"comentarios":["","","","","","","","Firmado por: Juan Manuel Serrano"]},{"idseguimiento":"EMX940315915","fecha":["12-oct-17","12-oct-17","12-oct-17","13-oct-17","13-oct-17","13-oct-17","14-oct-17","14-oct-17","","",""],"hora":["13:50","17:30","18:56","11:45","16:57","19:45","09:45","14:56","",""],"movimiento":["Etiqueta Impresa - Ciudad de México","Recolectado por el correo. Ciudad de México","Procesado en centro de distribución.Ciudad de México","Procesado en Aerolinea. Ciudad de México","Llegada a Centro de distribucion destino- Monterrey","Arribado a sucursal de destino. Monterrey -México","Salida  Ruta para Entrega","Entregado","",""],"comentarios":["","","","","","","","Firmado por: Ivonne Martinez Coajallo"]},{"idseguimiento":"EMXR98937895","fecha":["19-oct-17","20-oct-17"],"hora":["22:56","11:45"],"movimiento":["Etiqueta Impresa - Ciudad de México","Recolectado por el correo. Ciudad de México"],"comentarios":[]},{"idseguimiento":"ECOL99567009","fecha":["12-sep-17","12-sep-17","12-sep-17","13-sep-17","13-sep-17","",""],"hora":["11:23","17:30","18:56","11:45","13:23","",""],"movimiento":["Etiqueta Impresa - Ciudad de México","Recolectado por el correo. Ciudad de México","Procesado en centro de distribución.Ciudad de México","Ruta de Entrega","Entregado","",""],"comentarios":["","","","","Firmado por: Ruby Manjarrez Morales"]}]');
+var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","estadoEntrega":"Entregado","fechaEntrega":"Lunes, Noviembre 06, 2017 EN 16:23","entregaFirmada":"CHENG Y C","tipoEnvio":"HARD CARRIER","origen":"CUAUTITLAN - CUAUTITLAN IZCALLI - MEXICO","destino":"FLAT D5, 11/F , SUPREME IND BUILDING, 15-17 SHAN MEI STREET, FOTAN.","detalleMov":[{"fecha":"Lunes, Septiembre 18, 2017","movimiento":["Aprobado por el correo","Envío retirado / Recolectado","Salida a CEDIS","Llegada a CEDIS","Procesado en CEDIS"],"ubicacion":["Ciudad de México - México","Ciudad de México - México","Ciudad de México - México","Ciudad de México - México","Ciudad de México - México"],"hora":["11:45","13:34","19:30","19:45","19:46"],"pieza":["1","1","1","1","1"]},{"fecha":"Martes, Septiembre 19, 2017","movimiento":["Salida de CEDIS a Tránsito","Regreso a CEDIS","RETENIDO en CEDIS"],"ubicacion":["Ciudad de México - México","Ciudad de México - México","Ciudad de México - México"],"hora":["11:40","14:34","14:35"],"pieza":["1","1","1"]},{"fecha":"Jueves, Octubre 05, 2017","movimiento":["Salida de CEDIS a Tránsito","Llegada a Centro de Envios"],"ubicacion":["Ciudad de México - México","Ciudad de México - México"],"hora":["07:20","10:40"],"pieza":["1","1"]},{"fecha":"Viernes, Octubre 06, 2017","movimiento":["Revision aduanal para salida a destino"],"ubicacion":["Ciudad de México - México"],"hora":["08:34"],"pieza":["1"]},{"fecha":"Martes, Octubre 10, 2017","movimiento":["Finalizo revision aduanal para salida a destino"],"ubicacion":["Ciudad de México - México"],"hora":["22:20"],"pieza":["1"]},{"fecha":"Lunes, Octubre 23, 2017","movimiento":["Procesado en Centro de Envios para salida a Destino","En Vuelo ( SALIDA INTERNACIONAL)"],"ubicacion":["Ciudad de México - México","Ciudad de México - México"],"hora":["09:40","11:45"],"pieza":["1","1"]},{"fecha":"Martes, Octubre 24, 2017","movimiento":["Actualizacion de estatus en aduanas","Procesado en Aduana Finalizado","Llegada a un centro de Oficinas.","Procesado para salida a destino","En Vuelo ( SALIDA INTERNACIONAL)"],"ubicacion":["Cincinnati -  Estados Unidos","Cincinnati -  Estados Unidos","Cincinnati -  Estados Unidos","Cincinnati -  Estados Unidos","Cincinnati - EstadosUnidos"],"hora":["13:56","15:34","16:23","20:45","22:13"],"pieza":["1","1","1","1","1"]},{"fecha":"Viernes, Noviembre 03, 2017","movimiento":["Llegada a un centro de Oficinas.","Proceso de Aduanas Iniciado","Procesado en Aduana Finalizado","Procesado en HONG KONG"],"ubicacion":["HONG KONG","HONG KONG","HONG KONG","HONG KONG"],"hora":["09:45","10:16","12:23","16:34"],"pieza":["1","1","1","1"]},{"fecha":"Martes, Noviembre 07, 2017","movimiento":["Envío en Ruta de Entrega FOTAN","Entregado "],"ubicacion":["HONG KONG","HONG KONG"],"hora":["11:16","16:23"],"pieza":["1","1"]}]}]');
 	$("#btn_consultas").click(function(){
 				  var sinInfoGuia = "No se cuenta con información de esta guia.";
 				  var vacioGuia = "Favor de capturar una guia valida.";
+				  var detalleGuia = "<div class='panel panel-primary'><div class=panel-heading'>Detalle de guía</div><div class='panel-body'>";
 				  var headCabecera = 
-				  "<table class='table'><thead class='thead-dark'><tr><th scope='col'>Fecha</th><th scope='col'>Hora</th><th scope='col'>Movimiento</th><th scope='col'>Comentario</th></tr></thead><tbody>";
+				  "<table class='table table-bordered' ><thead class='thead-inverse'><tr><th scope='col'>Movimiento</th><th scope='col'>Ubicación</th><th scope='col'>Hora</th><th scope='col'>Pieza</th></tr></thead><tbody>";
 				  var cadenaString = "";
 				  if ($("#text_guia").val() !== "") {
 					  for (i = 0; i < myObjInfo.length; i++) {
 						if (myObjInfo[i].idseguimiento === $("#text_guia").val()) {
-							for (index = 0; index < myObjInfo[i].fecha.length; index++) {
-								var fec = myObjInfo[i].fecha[index] == undefined ? "":myObjInfo[i].fecha[index];
-								var hrs = myObjInfo[i].hora[index] == undefined ? "":myObjInfo[i].hora[index];
-								var mov = myObjInfo[i].movimiento[index] == undefined ? "":myObjInfo[i].movimiento[index];
-								var comen = myObjInfo[i].comentarios[index] == undefined ? "":myObjInfo[i].comentarios[index];
-								cadenaString += "<tr><td>" + fec + "</td>"
-											+"<td>" + hrs + "</td>"
-											+"<td>" + mov + "</td>"	
-											+"<td>" + comen + "</td></tr>";
+							var panelDetalle = "<div class='panel panel-primary'>"
+							+"<div class='panel-heading'><p>Detalle de guía</p></div>"
+							+"<div class='panel-body' align='center'>"
+							+"<table border='0' width='900px;'>"
+							+"<thead><tr><th width='450px;' scope='col'>Guía aerea:</th><th width='450px;' scope='col'>Area de servicio origen:</th></tr></thead>"
+							+"<thead><tr><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].idseguimiento + "</p></th><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].origen + "</p></th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'>Estado:</th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].estadoEntrega + "</p></th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'>Fecha entrega:</th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].fechaEntrega + "</p></th></tr></thead>"
+							+"<thead><tr><th scope='col'>Entrega firma:</th><th scope='col'>Area de servicio destino:</th></tr></thead>"
+							+"<thead><tr><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].entregaFirmada + "</p></th><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].destino + "</p></th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'>Tipo de guia:</th></tr></thead>"
+							+"<thead><tr><th colspan='2' scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].tipoEnvio + "</p></th></tr></thead>"
+							+"</table>"
+							+"<a href='' class='btn btn-primary' role='button' download='Descargar firma'>Descargar firma</a>";
+
+							
+							for (index = 0; index < myObjInfo[i].detalleMov.length; index++) {
+								var fec = myObjInfo[i].detalleMov[index].fecha == undefined ? "":myObjInfo[i].detalleMov[index].fecha;
+								cadenaString += "<tr><td><p class='thead-dark'>" + fec + "</p><td></tr>";
+								for (indexDM = 0; indexDM < myObjInfo[i].detalleMov[index].movimiento.length; indexDM++) {
+									var mov = myObjInfo[i].detalleMov[index].movimiento[indexDM];
+									var ubicacion = myObjInfo[i].detalleMov[index].ubicacion[indexDM];
+									var hora = myObjInfo[i].detalleMov[index].hora[indexDM];
+									var pieza = myObjInfo[i].detalleMov[index].pieza[indexDM];
+									
+									mov = mov == undefined ? "":mov;
+									ubicacion = ubicacion == undefined ? "":ubicacion;
+									hora = hora == undefined ? "":hora;
+									pieza = pieza == undefined ? "":pieza;
+									cadenaString += "<tr><td>" + mov + "</td>"
+											+"<td>" + ubicacion + "</td>"
+											+"<td>" + hora + "</td>"	
+											+"<td>" + pieza + "</td></tr>";
+								}
 							}
 							var ponInfo = headCabecera+cadenaString+"<tbody></table>";
 							$("#divDetalleGuia").empty().append(ponInfo);
 							$("#divDetalleGuia").show();
+							$("#detMovGuia").empty().append(panelDetalle);
+							$("#detMovGuia").show();
 							$("#danger").empty().append("");
 							$("#danger").hide();
-							break;
 						} else {
 							$("#divDetalleGuia").empty().append("");
 							$("#divDetalleGuia").hide();
+							$("#detMovGuia").empty().append("");
+							$("#detMovGuia").hide();
 							$("#danger").empty().append(sinInfoGuia);
 							$("#danger").show();
 						}
@@ -37,6 +68,8 @@ var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","fecha":["18-sep-
 				  } else {
 					$("#divDetalleGuia").empty().append("");
 					$("#divDetalleGuia").hide();
+					$("#detMovGuia").empty().append("");
+					$("#detMovGuia").hide();
 					$("#danger").empty().append(vacioGuia);
 					$("#danger").show();
 				  }
