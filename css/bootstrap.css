@@ -1,0 +1,22 @@
+.panel-primary > .panel-heading {
+    background-color: #212529;
+    border-color: #212529;
+    color: #fff;
+}
+.panel-heading {
+    border-bottom: 1px solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+}
+.panel-body {
+    padding: 15px;
+}
+.panel{
+	margin-bottom:20px;
+	background-color:#fff;
+	border:1px solid;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+	box-shadow:0 1px 1px rgba(0,0,0,.05)
+}
