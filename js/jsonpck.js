@@ -27,7 +27,7 @@ var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","estadoEntrega":"
 							+"<thead><tr><th colspan='2' scope='col'>Tipo de guia:</th></tr></thead>"
 							+"<thead><tr><th colspan='2' scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].tipoEnvio + "</p></th></tr></thead>"
 							+"</table>"
-							+"<a href='vendor/HardCarrEE987271825CN.pdf' class='btn btn-primary' role='button' download='Descargar firma'>Descargar firma</a>";
+							+"<a href='HardCarrEE987271825CN.pdf' class='btn btn-primary' role='button' download='Descargar firma'>Descargar firma</a>";
 
 							
 							for (index = 0; index < myObjInfo[i].detalleMov.length; index++) {
