@@ -12,6 +12,10 @@ var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","estadoEntrega":"
 				  if ($("#text_guia").val() !== "") {
 					  for (i = 0; i < myObjInfo.length; i++) {
 						if (myObjInfo[i].idseguimiento === $("#text_guia").val()) {
+							var botonDescarga = "";
+							if (myObjInfo[i].estadoEntrega == 'Entregado') {
+								botonDescarga = "<a href='HardCarrEE987271825CN.pdf' class='btn btn-primary' role='button' download='Descargar firma'>Descargar firma</a>";
+							}
 							var panelDetalle = "<div class='panel panel-primary'>"
 							+"<div class='panel-heading'><p>Detalle de guía</p></div>"
 							+"<div class='panel-body' align='center'>"
@@ -26,10 +30,8 @@ var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","estadoEntrega":"
 							+"<thead><tr><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].entregaFirmada + "</p></th><th scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].destino + "</p></th></tr></thead>"
 							+"<thead><tr><th colspan='2' scope='col'>Tipo de guia:</th></tr></thead>"
 							+"<thead><tr><th colspan='2' scope='col'><p style='margin-left: 1cm;font-size: 13px;'>" + myObjInfo[i].tipoEnvio + "</p></th></tr></thead>"
-							+"</table>"
-							+"<a href='HardCarrEE987271825CN.pdf' class='btn btn-primary' role='button' download='Descargar firma'>Descargar firma</a>";
-
-							
+							+"</table>" + botonDescarga;
+						
 							for (index = 0; index < myObjInfo[i].detalleMov.length; index++) {
 								var fec = myObjInfo[i].detalleMov[index].fecha == undefined ? "":myObjInfo[i].detalleMov[index].fecha;
 								cadenaString += "<tr><td><p class='thead-dark'>" + fec + "</p><td></tr>";
@@ -56,6 +58,7 @@ var myObjInfo = $.parseJSON('[{"idseguimiento":"EE987271825CN","estadoEntrega":"
 							$("#detMovGuia").show();
 							$("#danger").empty().append("");
 							$("#danger").hide();
+							break;
 						} else {
 							$("#divDetalleGuia").empty().append("");
 							$("#divDetalleGuia").hide();
